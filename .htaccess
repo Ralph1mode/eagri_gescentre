@@ -1,0 +1,24 @@
+RewriteEngine On
+
+# deal with admin first
+RewriteCond %{REQUEST_URI} ^/eagri_gescentre/(admin)
+RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+RewriteRule ^admin/template/(.*)$ backend/web/template/$1 [L]
+RewriteRule ^admin/uploads/(.*)$ backend/web/uploads/$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/eagri_gescentre/backend/web/(assets|template|uploads)/
+RewriteCond %{REQUEST_URI} ^/eagri_gescentre/(admin)
+RewriteRule ^.*$ backend/web/index.php [L]
+
+
+RewriteCond %{REQUEST_URI} ^/eagri_gescentre/(assets|template|images)
+RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+RewriteRule ^template/(.*)$ frontend/web/template/$1 [L]
+RewriteRule ^images/(.*)$ frontend/web/images/$1 [L]
+
+
+RewriteCond %{REQUEST_URI} !^/eagri_gescentre/(frontend|backend)/web/(assets|template|images|uploads)/
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ frontend/web/index.php

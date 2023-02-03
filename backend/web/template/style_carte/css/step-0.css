@@ -1,0 +1,34 @@
+/*https://www.heropatterns.com/*/
+/*https://uigradients.com/#ByDesign*/
+
+/*html {
+  background: #009FFF;  /* fallback for old browsers 
+  background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 
+  background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../img/graph-paper.svg');
+  background-repeat: repeat;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+*/
+html {
+  background: #009FFF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0df019, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f878ad, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../img/graph-paper.svg');
+  background-repeat: repeat;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+}

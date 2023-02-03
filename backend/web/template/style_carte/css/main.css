@@ -1,0 +1,200 @@
+/*https://www.heropatterns.com/*/
+/*https://uigradients.com/#ByDesign*/
+
+html {
+  background: #009FFF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../img/graph-paper.svg');
+  background-repeat: repeat;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.card-container {
+  background: #34495e;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1); 
+  border-bottom: 6px solid #2c3e50;
+  border-right: 6px solid #2c3e50;
+  transition: 0.5s transform, 0.5s box-shadow;
+}
+
+.card-container:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.3); 
+}
+
+.card {
+  position: relative;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  width: 50%;
+  height: 5%;
+  left: 0;
+  top: 26%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  opacity: 0.5;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  right: -75px;
+  top:-75px;
+  border-radius: 50%;
+  opacity: 0.05;
+}
+
+.bank-name {
+  margin: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  padding-left: 5%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  min-width: 30%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.chip {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  height: 23%;
+}
+
+.contactless {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  height: 15%;
+  transform: rotate(90deg);
+}
+
+.card-number {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+}
+
+.card-name, .card-expire {
+  position: absolute;
+  left: 10%;
+  font-family: sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 3px black;
+}
+
+.card-name {
+  top: 74%;
+  font-size: 1.3rem;
+}
+
+.card-expire {
+  top: 82%;
+  font-size: 1rem;
+}
+
+.visa {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  height: 30%;
+}
+
+.arrow {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent; 
+  border-right:17px solid white; 
+}
+
+@media screen and (max-width: 580px){
+  :root {
+    font-size: 12px;
+  }
+  .bank-name {
+    padding: 8px 15px;
+  }
+  .arrow {
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent; 
+    border-right:15px solid white; 
+  }
+}
+
+@media screen and (max-width: 460px){
+  :root {
+    font-size: 10px;
+  }
+  .bank-name {
+    padding: 5px 12px;
+  }
+  .arrow {
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent; 
+    border-right:11px solid white; 
+  }
+}
+
+@media screen and (max-width: 360px){
+  :root {
+    font-size: 8px;
+  }
+
+  .card-container {
+    border-bottom: 3px solid #2c3e50;
+    border-right: 3px solid #2c3e50;
+  }
+
+  .bank-name {
+    padding: 3px 8px;
+  }
+
+  .arrow {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:8px solid white; 
+  }
+}
